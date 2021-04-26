@@ -1,0 +1,56 @@
+.LiveCam__container {
+    margin-top: 2rem;
+}
+
+.col-center {
+    text-align: center;
+    justify-content: center;
+    margin-top: 3rem;
+}
+
+th {
+    padding: .5rem 1rem
+}
+
+#container360 {
+    height: 0px; width: 0px; user-select: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); cursor: grab;
+}
+
+.demo-demo {
+    height: 375px;
+    width: 675px;
+}
+
+
+
+.video-container{
+    width:40rem;
+    height:22rem;
+    overflow:hidden;
+    position:relative;
+    margin: 0 auto;
+  }
+  
+  
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+  
+
+.video-container iframe {
+    position: absolute;
+    top: -60px;
+    left: 0;
+    width: 100%;
+    height: calc(100% + 120px);
+}
+
+  
+
+body {
+    background-color: white;
+   }
