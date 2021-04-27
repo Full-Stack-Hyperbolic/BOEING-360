@@ -78,6 +78,7 @@
         left: -100%;
         opacity: 1;
         transition: all 0.5s ease;
+        text-decoration: none;
     }
 
     .nav-menu.active {
@@ -149,12 +150,21 @@
 
 }
 
-
 .nav-link {
     color: white;
     margin: 0 .75rem;
+    text-decoration: none !important;
 }
 
-.nav-active {
-    color: red;
+.nav-link:hover {
+    background-color: white;
+    border-radius: .5rem;
+    color: var(--dark-blue);
+    opacity: 60%;
+    text-decoration: none !important;
+
+}
+
+.nav-menu {
+    text-decoration: none;
 }

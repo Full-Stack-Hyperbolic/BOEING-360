@@ -11,7 +11,7 @@ export default function Home() {
   return (
     <Container fluid>
       <Row className='Home__mainRow'>
-        <Col xxs={4} className='Home__left'>
+        <Col xxs={6} className='Home__left'>
           <h1 className='home__title'>See the world like never before.</h1>
           <Row className='btn__row'>
             <Link to='/live-cam'>

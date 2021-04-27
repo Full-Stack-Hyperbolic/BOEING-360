@@ -20,7 +20,7 @@ var group;
 var map;
 var interval;
 
-function MyComponent(){
+function MyComponent() {
   map = useMap();
   for (var i = 0; i < pois.length; i++) {
     var poi = pois[i];
@@ -28,13 +28,15 @@ function MyComponent(){
       onMap[poi.id] = false;
     }
     if (markers[poi.id] === undefined) {
-      markers[poi.id] = L.marker(poi.latlng).bindPopup('<b>Location</b><br>' + poi.name);
+      markers[poi.id] = L.marker(poi.latlng).bindPopup(
+        '<b>Location</b><br>' + poi.name
+      );
     }
   }
   return null;
 }
 
-function OldMap(){
+function OldMap() {
   //NOTE: Leaflet marker does not function correctly on Safari/Edge browsers. Use chrome
   for (var i = 0; i < pois.length; i++) {
     var poi = pois[i];
@@ -42,7 +44,9 @@ function OldMap(){
       onMap[poi.id] = false;
     }
     if (markers[poi.id] === undefined) {
-      markers[poi.id] = L.marker(poi.latlng).bindPopup('<b>Location</b><br>' + poi.name);
+      markers[poi.id] = L.marker(poi.latlng).bindPopup(
+        '<b>Location</b><br>' + poi.name
+      );
     }
   }
   return null;
@@ -56,7 +60,7 @@ export default function LiveCamera() {
   const [passedPois, setPassedPois] = useState(pois);
 
   // Slider value state
-  radius = 240
+  radius = 240;
 
   function restartSim() {
     clearInterval(interval);
@@ -64,12 +68,12 @@ export default function LiveCamera() {
     long = -117.409321;
     runSim();
   }
-  
+
   function runSim() {
     //radius = sliderValue
     interval = setInterval(update, 1000);
   }
-  
+
   function update() {
     if (long > -117.396437) {
       clearInterval(interval);
@@ -85,8 +89,8 @@ export default function LiveCamera() {
     }).addTo(map);
     check_pois();
   }
-  
-  function check_pois(){
+
+  function check_pois() {
     // group = L.featureGroup().addTo(map).on('click', groupClick);
     const updated_pois = [];
     for (var i = 0; i < pois.length; i++) {
@@ -98,7 +102,7 @@ export default function LiveCamera() {
           onMap[poi.id] = false;
         }
         markers[poi.id].remove();
-      }else{
+      } else {
         if (onMap[poi.id] === false) {
           onMap[poi.id] = true;
           markers[poi.id].addTo(map);
@@ -129,17 +133,13 @@ export default function LiveCamera() {
   };
   return (
     <div>
-      <div id='mapid' style={{ marginTop: '14rem', display: 'none'}}>
+      <div id='mapid' style={{ marginTop: '14rem', display: 'none' }}>
         <MapContainer center={[lat, long]} zoom={14}>
           <TileLayer
             attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
             url='https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png'
           />
-          {!map ? (
-            <MyComponent />
-            ): (
-            <OldMap />
-          )}
+          {!map ? <MyComponent /> : <OldMap />}
         </MapContainer>
       </div>
       <Container className='LiveCam__container'>
@@ -178,7 +178,7 @@ export default function LiveCamera() {
                       <iframe
                         width='560'
                         height='315'
-                        src='https://www.youtube.com/embed/XeRz8vXFrGI?autoplay=1&controls=0&modestbranding=1&rel=0&showtitle=0'
+                        src='https://www.youtube.com/embed/DQxcFnbHQn0?autoplay=1&controls=0&modestbranding=1&rel=0&showtitle=0'
                         title='360-Demo'
                         frameborder='0'
                         allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture'

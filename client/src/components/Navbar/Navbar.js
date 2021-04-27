@@ -30,13 +30,13 @@ export class Navbar extends Component {
           ></i>
         </div>
         <ul className={this.state.clicked ? 'nav-menu active' : 'nav-menu'}>
-          <Link to='/'>
+          <Link to='/' style={{ textDecoration: 'none' }}>
             <li className='nav-link'>Home</li>
           </Link>
-          <Link to='/live-cam'>
+          <Link to='/live-cam' style={{ textDecoration: 'none' }}>
             <li className='nav-link'>360° Cam</li>
           </Link>
-          <Link to='/live-map'>
+          <Link to='/live-map' style={{ textDecoration: 'none' }}>
             <li className='nav-link'>Live-Map</li>
           </Link>
         </ul>
