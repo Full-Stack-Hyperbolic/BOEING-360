@@ -2,6 +2,13 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+# Installing Dependencies
+
+This project requires the latest version of [Node & NPM](https://www.npmjs.com/get-npm)
+
+Once installed, dependencies for the project need to be installed within the project directory by running `npm i` within the root and the client directory of the project folder.
+
+
 ## Available Scripts
 
 In the project (root) directory, you can run:
