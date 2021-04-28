@@ -8,6 +8,7 @@ This project requires the latest version of [Node & NPM](https://www.npmjs.com/g
 
 Once installed, dependencies for the project need to be installed within the project directory by running `npm i` within the root and the client directory of the project folder.
 
+This will populate the root and client directory with a new direcotry in each called 'node_modules' containing our project dependencies based on what is listed in the package.jsons (for both the root and client which have separate dependencies).
 
 ## Available Scripts
 
